@@ -77,8 +77,11 @@ class PackageController extends Controller
     public function edit($id)
     {
         $package = Package::find($id);
-
-        return view('package.edit', compact('package'));
+        $place = Place::pluck('name_place','id');
+        $location = Location::pluck('name_location','id');
+        $place = place::all();
+        $location = location::all();
+        return view('package.edit', compact('package','place','location'));
     }
 
     /**

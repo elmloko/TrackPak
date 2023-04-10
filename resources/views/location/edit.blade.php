@@ -17,9 +17,9 @@
                         <span class="card-title">{{ __('Actualizar') }} Destinos</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('locations.update', $location->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
+                        <form method="POST" action="{{ route('locations.update', $location->id) }}" role="form" enctype="multipart/form-data">
                             @csrf
+                            @method('PUT')
 
                             @include('location.form')
 

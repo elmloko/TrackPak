@@ -14,7 +14,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Location</span>
+                        <span class="card-title">{{ __('Crear') }} Destinos</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('locations.store') }}"  role="form" enctype="multipart/form-data">

@@ -16,11 +16,11 @@
                         <span class="card-title">{{ __('Update') }} Package</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('packages.update', $package->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
+                        <form method="POST" action="{{ route('packages.update', $package->id) }}" role="form" enctype="multipart/form-data">
                             @csrf
+                            @method('PUT')
 
-                            @include('package.form')
+                            @include('location.form')
 
                         </form>
                     </div>

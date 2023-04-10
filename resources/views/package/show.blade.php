@@ -12,25 +12,25 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Package</span>
+                            <span class="card-title">{{ __('Mostrar') }} Paquetes</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('packages.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('packages.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Number Package:</strong>
+                            <strong>Numero de Paquete:</strong>
                             {{ $package->number_package }}
                         </div>
                         <div class="form-group">
-                            <strong>Place Id:</strong>
-                            {{ $package->place_id }}
+                            <strong>Desde:</strong>
+                            {{ $package->place->name_place}}
                         </div>
                         <div class="form-group">
-                            <strong>Location Id:</strong>
+                            <strong>Hasta:</strong>
                             {{ $package->location_id }}
                         </div>
 
