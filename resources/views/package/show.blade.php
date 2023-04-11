@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Hasta:</strong>
-                            {{ $package->location_id }}
+                            {{ $package->location->name_location }}
                         </div>
 
                     </div>

@@ -19,22 +19,28 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Package extends Model
 {
-    
-    static $rules = [
-		'number_package' => 'required',
-		'place_id' => 'required',
-		'location_id' => 'required',
-    ];
 
-    protected $perPage = 20;
+  static $rules = [
+    'number_package' => 'required',
+    'place_id' => 'required',
+    'location_id' => 'required',
+  ];
 
-    /**
-     * Attributes that should be mass-assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['number_package','place_id','location_id'];
+  protected $perPage = 20;
 
+  /**
+   * Attributes that should be mass-assignable.
+   *
+   * @var array
+   */
+  protected $fillable = ['number_package', 'place_id', 'location_id'];
+  public function place()
+  {
+    return $this->belongsTo(Place::class);
+  }
 
-
+  public function location()
+  {
+    return $this->belongsTo(Location::class);
+  }
 }

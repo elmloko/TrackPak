@@ -36,7 +36,7 @@ class Place extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function packages()
+    public function package()
     {
         return $this->hasMany('App\Models\Package', 'place_id', 'id');
     }
