@@ -26,11 +26,11 @@
                             {{ $package->number_package }}
                         </div>
                         <div class="form-group">
-                            <strong>Desde:</strong>
+                            <strong>Hasta:</strong>
                             {{ $package->place->name_place}}
                         </div>
                         <div class="form-group">
-                            <strong>Hasta:</strong>
+                            <strong>Donde:</strong>
                             {{ $package->location->name_location }}
                         </div>
 

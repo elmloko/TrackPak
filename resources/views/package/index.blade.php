@@ -50,9 +50,6 @@ Package
                                     <td>{{ ++$i }}</td>
 
                                     <td>{{ $package->number_package }}</td>
-                                    {{-- <td>{{ $package->place_id }}</td>
-                                    <td>{{ $package->location_id }}</td> --}}
-
                                     <td>{{ $package->place->name_place }}</td>
                                     <td>{{ $package->location->name_location }}</td>
 
