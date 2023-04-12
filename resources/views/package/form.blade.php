@@ -8,15 +8,15 @@
             {!! $errors->first('number_package', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Desde') }}
+            {{ Form::label('Hasta') }}
             {{ Form::select('place_id', $place , $package->place_id, ['class' => 'form-control' .
-            ($errors->has('place_id') ? ' is-invalid' : ''), 'placeholder' => 'Desde']) }}
+            ($errors->has('place_id') ? ' is-invalid' : ''), 'placeholder' => 'Hasta']) }}
             {!! $errors->first('place_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Hasta') }}
+            {{ Form::label('Donde') }}
             {{ Form::select('location_id', $location , $package->location_id, ['class' => 'form-control' .
-            ($errors->has('location_id') ? ' is-invalid' : ''), 'placeholder' => 'Hasta']) }}
+            ($errors->has('location_id') ? ' is-invalid' : ''), 'placeholder' => 'Donde']) }}
             {!! $errors->first('location_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
     </div>
