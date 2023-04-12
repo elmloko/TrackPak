@@ -20,7 +20,7 @@
                             @csrf
                             @method('PUT')
 
-                            @include('location.form')
+                            @include('package.form')
 
                         </form>
                     </div>

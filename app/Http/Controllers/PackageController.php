@@ -34,9 +34,9 @@ class PackageController extends Controller
     public function create()
     {
         $package = new Package();
-        $place = Place::pluck('name_place','id');
-        $location = Location::pluck('name_location','id');
-        return view('package.create', compact('package','place','location'));
+        $place = Place::pluck('name_place', 'id');
+        $location = Location::pluck('name_location', 'id');
+        return view('package.create', compact('package', 'place', 'location'));
     }
 
     /**
@@ -77,9 +77,9 @@ class PackageController extends Controller
     public function edit($id)
     {
         $package = Package::find($id);
-        $place = Place::pluck('name_place','id');
-        $location = Location::pluck('name_location','id');
-        return view('package.edit', compact('package','place','location'));
+        $place = Place::pluck('name_place', 'id');
+        $location = Location::pluck('name_location', 'id');
+        return view('package.edit', compact('package', 'place', 'location'));
     }
 
     /**
@@ -94,6 +94,10 @@ class PackageController extends Controller
         request()->validate(Package::$rules);
 
         $package->update($request->all());
+
+        $location = Location::find($request->input('location_id'));
+        $package->location()->associate($location);
+        $package->save();
 
         return redirect()->route('packages.index')
             ->with('success', 'Package updated successfully');
