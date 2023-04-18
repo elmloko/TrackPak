@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 class RolController extends Controller
 {
-    // function __construct()
-    // {
-    //     $this->middleware('permission:')
-    // }
+    function __construct()
+    {
+        $this->middleware('permission:ver-rol | crear-rol | edit-rol | borrar-rol',['only'=>[]]);
+    }
     public function index()
     {
         //
